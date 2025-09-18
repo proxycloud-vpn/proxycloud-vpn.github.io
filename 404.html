@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | ProxyCloud</title>
+    <meta name="description" content="Page not found - ProxyCloud VPN">
+    <meta name="keywords" content="ProxyCloud, VPN, 404, page not found, secure browsing, privacy, fast vpn, free vpn, no ads, no logs">
+    <meta name="author" content="Hossein Pira">
+    <meta name="telegram" content="https://t.me/h3dev">
+    <meta name="github" content="https://github.com/code3-dev">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/src/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-100">
+    <!-- Header -->
+    <header class="py-6 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo.png" alt="ProxyCloud Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">ProxyCloud</span>
+            </div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="./" class="hover:text-primary transition-colors">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 404 Content -->
+    <main class="flex-grow flex items-center justify-center px-4 py-16">
+        <div class="text-center max-w-2xl">
+            <div class="animate-float mb-8">
+                <div class="bg-gradient-to-br from-primary to-secondary rounded-2xl w-32 h-32 md:w-40 md:h-40 flex items-center justify-center mx-auto shadow-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 md:h-20 md:w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">404</span>
+            </h1>
+            
+            <h2 class="text-2xl md:text-3xl font-bold mb-6">Page Not Found</h2>
+            
+            <p class="text-gray-300 text-lg mb-8 max-w-lg mx-auto">
+                Sorry, the page you're looking for doesn't exist or has been moved.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="./" class="gradient-bg text-white px-8 py-4 rounded-lg font-semibold text-center hover:opacity-90 transition-opacity shadow-lg">
+                    Back to Home
+                </a>
+                <a href="#downloads" class="bg-darker border border-gray-700 text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors">
+                    Download App
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-center mb-4">
+                <div class="flex space-x-6">
+                    <a href="https://github.com/code3-dev/ProxyCloud" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/irdevs_dns" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-telegram-plane text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm">
+                <p>© 2025 ProxyCloud. All rights reserved. Fast, Unlimited, Safe, Free, No Ads, No Logs.</p>
+                <p class="mt-2">Developed by <a href="https://t.me/h3dev" target="_blank" class="text-primary hover:underline">Hossein Pira</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

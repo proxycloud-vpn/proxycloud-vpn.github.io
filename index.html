@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProxyCloud - Fast, Unlimited, Safe VPN</title>
+    <meta name="description" content="ProxyCloud is a fast, unlimited, safe, free, open-source VPN with no ads and no logs for Android and Desktop (Windows, Linux, macOS).">
+    <meta name="keywords" content="ProxyCloud, VPN, free VPN, fast VPN, secure browsing, privacy protection, no ads, no logs, open source, Android VPN, Windows VPN, macOS VPN, Linux VPN, proxy, secure internet, private browsing, anonymous browsing, encrypted connection">
+    <meta name="author" content="Hossein Pira">
+    <meta name="telegram" content="https://t.me/h3dev">
+    <meta name="github" content="https://github.com/code3-dev">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/src/css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-gray-100">
+    <!-- Header -->
+    <header class="py-6 px-4 sm:px-6 lg:px-8 glass-header">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="assets/images/logo.png" alt="ProxyCloud Logo" class="h-10 w-10">
+                <span class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">ProxyCloud</span>
+            </div>
+            <!-- Desktop Menu -->
+            <nav class="desktop-menu">
+                <ul class="flex space-x-8">
+                    <li><a href="#features" class="hover:text-primary transition-colors">Features</a></li>
+                    <li><a href="#downloads" class="hover:text-primary transition-colors">Downloads</a></li>
+                    <li><a href="#opensource" class="hover:text-primary transition-colors">Open Source</a></li>
+                </ul>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="mobile-menu text-gray-300 focus:outline-none" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden mt-4 glass-card rounded-lg p-4 absolute right-4 left-4 top-20 z-50">
+            <ul class="space-y-3">
+                <li><a href="#features" class="block py-2 hover:text-primary transition-colors">Features</a></li>
+                <li><a href="#downloads" class="block py-2 hover:text-primary transition-colors">Downloads</a></li>
+                <li><a href="#opensource" class="block py-2 hover:text-primary transition-colors">Open Source</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                        Fast, Unlimited, <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Safe</span> VPN
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8 max-w-lg">
+                        Experience unrestricted internet with our open-source VPN solution. No ads, no logs, completely free.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#downloads" class="glass-button-primary text-white px-8 py-4 rounded-lg font-semibold text-center hover:opacity-90 transition-opacity shadow-lg">
+                            <i class="fas fa-download mr-2"></i> Download Now
+                        </a>
+                        <a href="#opensource" class="glass-button-secondary border text-white px-8 py-4 rounded-lg font-semibold text-center hover:bg-gray-800 transition-colors">
+                            <i class="fab fa-github mr-2"></i> View Source
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="animate-float">
+                            <div class="glass-card rounded-2xl w-64 h-64 md:w-80 md:h-80 flex items-center justify-center shadow-2xl">
+                                <img src="assets/images/logo.png" alt="ProxyCloud Logo" class="h-40 w-40 md:h-48 md:w-48">
+                            </div>
+                        </div>
+                        <div class="absolute -top-6 -right-6 w-32 h-32 rounded-full bg-purple-500 opacity-20 blur-2xl"></div>
+                        <div class="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-indigo-500 opacity-20 blur-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 px-4 sm:px-6 lg:px-8 bg-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Powerful Features</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">ProxyCloud offers everything you need for a secure and unrestricted browsing experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lightning Fast</h3>
+                    <p class="text-gray-400">Experience blazing fast connection speeds with our optimized infrastructure and protocols.</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Military-Grade Security</h3>
+                    <p class="text-gray-400">Advanced encryption keeps your data safe from hackers and surveillance.</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-user-secret text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">No Logs Policy</h3>
+                    <p class="text-gray-400">We never track, collect, or share your personal data or browsing history.</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Global Servers</h3>
+                    <p class="text-gray-400">Access content from around the world with our extensive server network.</p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mb-6">
+                        <i class="fab fa-github text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Open Source</h3>
+                    <p class="text-gray-400">Fully transparent code that anyone can audit for security and privacy.</p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card glass-card p-8 rounded-2xl transition-all duration-300">
+                    <div class="w-12 h-12 rounded-lg gradient-bg flex items-center justify-center mb-6">
+                        <i class="fas fa-desktop text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cross-Platform</h3>
+                    <p class="text-gray-400">Available on Android, Windows, macOS, and Linux with a consistent experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Downloads Section -->
+    <section id="downloads" class="py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Download ProxyCloud</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Available for Android, Windows, macOS, and Linux</p>
+            </div>
+            
+            <!-- Android Downloads -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold mb-6 text-center flex items-center justify-center">
+                    <i class="fab fa-android text-green-500 mr-2 text-2xl"></i>
+                    Android
+                </h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <a href="https://github.com/code3-dev/ProxyCloud/releases/latest/download/proxycloud-universal.apk" class="download-btn glass-card rounded-xl p-4 flex flex-col items-center justify-center hover:border-primary transition-all duration-300">
+                        <img src="https://img.shields.io/badge/Android-Universal-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android Universal" class="mb-2">
+                        <span class="text-sm text-gray-400">Universal</span>
+                    </a>
+                    
+                    <a href="https://github.com/code3-dev/ProxyCloud/releases/latest/download/proxycloud-armeabi-v7a.apk" class="download-btn glass-card rounded-xl p-4 flex flex-col items-center justify-center hover:border-primary transition-all duration-300">
+                        <img src="https://img.shields.io/badge/Android-armeabi--v7a-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android armeabi-v7a" class="mb-2">
+                        <span class="text-sm text-gray-400">armeabi-v7a</span>
+                    </a>
+                    
+                    <a href="https://github.com/code3-dev/ProxyCloud/releases/latest/download/proxycloud-arm64-v8a.apk" class="download-btn glass-card rounded-xl p-4 flex flex-col items-center justify-center hover:border-primary transition-all duration-300">
+                        <img src="https://img.shields.io/badge/Android-arm64--v8a-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android arm64-v8a" class="mb-2">
+                        <span class="text-sm text-gray-400">arm64-v8a</span>
+                    </a>
+                    
+                    <a href="https://github.com/code3-dev/ProxyCloud/releases/latest/download/proxycloud-x86_64.apk" class="download-btn glass-card rounded-xl p-4 flex flex-col items-center justify-center hover:border-primary transition-all duration-300">
+                        <img src="https://img.shields.io/badge/Android-x86_64-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android x86_64" class="mb-2">
+                        <span class="text-sm text-gray-400">x86_64</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Desktop Downloads -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-center flex items-center justify-center">
+                    <i class="fas fa-desktop text-blue-500 mr-2 text-2xl"></i>
+                    Desktop
+                </h3>
+                
+                <div class="glass-card rounded-2xl p-6">
+                    <h4 class="text-xl font-bold mb-4">ProxyCloud GUI</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Windows -->
+                        <div class="glass-subcard p-4 rounded-xl">
+                            <h5 class="font-bold mb-3 text-primary flex items-center">
+                                <i class="fab fa-windows mr-2"></i> Windows
+                            </h5>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-win-x64.exe" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Windows Installer (.exe)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-win-portable.exe" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Windows Portable (.exe)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- macOS -->
+                        <div class="glass-subcard p-4 rounded-xl">
+                            <h5 class="font-bold mb-3 text-primary flex items-center">
+                                <i class="fab fa-apple mr-2"></i> macOS
+                            </h5>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-mac-x64.dmg" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        macOS Intel (x64) (.dmg)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-mac-arm64.dmg" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        macOS Apple Silicon (arm64) (.dmg)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-mac-x64.zip" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        macOS Intel (x64) (.zip)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-mac-arm64.zip" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        macOS Apple Silicon (arm64) (.zip)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Linux -->
+                        <div class="glass-subcard p-4 rounded-xl">
+                            <h5 class="font-bold mb-3 text-primary flex items-center">
+                                <i class="fab fa-linux mr-2"></i> Linux
+                            </h5>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-linux-amd64.deb" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Linux (.deb)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-linux-x86_64.rpm" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Linux (.rpm)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-linux-x86_64.AppImage" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Linux (.AppImage)
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/code3-dev/ProxyCloud-GUI/releases/latest/download/proxycloud-gui-linux-x64.tar.gz" class="text-gray-300 hover:text-white flex items-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Linux (.tar.gz)
+                                    </a>
+                                </li>
+                                <li class="pt-2">
+                                    <p class="text-gray-400">Arch Linux:</p>
+                                    <div class="glass-code p-3 rounded mt-1 text-sm">
+                                        <code>paru -S proxycloud-gui-bin</code><br>
+                                        <code class="mt-1">yay -S proxycloud-gui-bin</code>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section id="opensource" class="py-16 px-4 sm:px-6 lg:px-8 bg-darker">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="glass-card rounded-2xl w-full h-64 md:h-80 flex items-center justify-center">
+                        <div class="text-center p-4">
+                            <i class="fab fa-github text-6xl mx-auto text-white mb-4"></i>
+                            <h3 class="text-2xl font-bold text-white">Open Source</h3>
+                            <p class="text-white opacity-90 mt-2">Transparent and auditable</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl font-bold mb-6">Fully Open Source</h2>
+                    <p class="text-gray-300 mb-6">
+                        ProxyCloud is completely open source. We believe in transparency and giving users control over their privacy tools. 
+                        Our code is available for anyone to inspect, modify, and contribute to.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center glass-subcard p-3 rounded-lg">
+                            <i class="fab fa-android text-green-500 mr-2 text-xl"></i>
+                            <span>Android: Flutter, Kotlin + Xray Core</span>
+                        </div>
+                        <div class="flex items-center glass-subcard p-3 rounded-lg">
+                            <i class="fas fa-desktop text-blue-500 mr-2 text-xl"></i>
+                            <span>Desktop: Electron (JS) + Hiddy Core</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/code3-dev/ProxyCloud" target="_blank" class="glass-button-primary text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center hover:opacity-90 transition-opacity">
+                        <i class="fab fa-github mr-2"></i>
+                        View Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 sm:px-6 lg:px-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <img src="assets/images/logo.png" alt="ProxyCloud Logo" class="h-8 w-8">
+                    <span class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">ProxyCloud</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/code3-dev/ProxyCloud" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/irdevs_dns" target="_blank" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-telegram-plane text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>© 2025 ProxyCloud. All rights reserved. Fast, Unlimited, Safe, Free, No Ads, No Logs.</p>
+                <p class="mt-2">Developed by <a href="https://t.me/h3dev" target="_blank" class="text-primary hover:underline">Hossein Pira</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/src/js/main.js"></script>
+</body>
+</html>
